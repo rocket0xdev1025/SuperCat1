@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Cat ($SCAT) — Fearless Feline Power on Solana</title>
+  <meta name="description" content="Super Cat brings fearless feline power to Solana, uniting meme lovers through speed, courage, community, and unstoppable fun." />
+  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            scat: {
+              blue: "#1E6FE8",
+              navy: "#0B2A6B",
+              sky: "#5EC8FF",
+              red: "#E31B23",
+              gold: "#F5C518",
+              orange: "#E89A3C",
+              cream: "#FFF6E8"
+            }
+          },
+          fontFamily: {
+            display: ['"Bangers"', "cursive"],
+            comic: ['"Luckiest Guy"', "cursive"],
+            body: ['"Nunito"', "system-ui", "sans-serif"]
+          },
+          boxShadow: {
+            comic: "6px 6px 0 #0B2A6B",
+            "comic-red": "6px 6px 0 #E31B23",
+            "comic-gold": "5px 5px 0 #F5C518"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ca: "TBA";
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      color: #fff6e8;
+      background: #071a44;
+    }
+
+    .sky-bg {
+      background:
+        radial-gradient(ellipse 90% 50% at 80% 0%, rgba(255, 214, 90, 0.28), transparent 55%),
+        radial-gradient(ellipse 70% 40% at 10% 8%, rgba(94, 200, 255, 0.45), transparent 50%),
+        linear-gradient(180deg, #1a6ed4 0%, #3aa4ee 28%, #7ecfff 52%, #b8e4ff 70%, #f4c76a 88%, #e89a3c 100%);
+    }
+
+    .clouds {
+      pointer-events: none;
+      background-image:
+        radial-gradient(ellipse 140px 50px at 12% 18%, rgba(255,255,255,.85) 0%, transparent 70%),
+        radial-gradient(ellipse 180px 60px at 38% 12%, rgba(255,255,255,.7) 0%, transparent 70%),
+        radial-gradient(ellipse 160px 55px at 72% 16%, rgba(255,255,255,.8) 0%, transparent 70%),
+        radial-gradient(ellipse 120px 42px at 92% 10%, rgba(255,255,255,.65) 0%, transparent 70%);
+      animation: drift 28s linear infinite;
+    }
+
+    @keyframes drift {
+      0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+      100% { background-position: 120px 0, 80px 0, 140px 0, 60px 0; }
+    }
+
+    .city {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 220px;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(#061433 0 0),
+        linear-gradient(#0a1f4a 0 0),
+        linear-gradient(#081a40 0 0),
+        linear-gradient(#0c2458 0 0),
+        linear-gradient(#071833 0 0),
+        linear-gradient(#102a62 0 0),
+        linear-gradient(#061433 0 0),
+        linear-gradient(#0d2860 0 0),
+        linear-gradient(#081c44 0 0),
+        linear-gradient(#122e6c 0 0);
+      background-size:
+        7% 70%, 5% 92%, 8% 78%, 6% 100%, 9% 64%, 5% 86%, 7% 74%, 6% 96%, 8% 68%, 5% 88%;
+      background-repeat: no-repeat;
+      background-position:
+        2% 100%, 10% 100%, 18% 100%, 28% 100%, 38% 100%, 48% 100%, 58% 100%, 70% 100%, 82% 100%, 93% 100%;
+      filter: drop-shadow(0 -12px 18px rgba(7, 26, 67, 0.35));
+    }
+
+    .city::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0 10px,
+        rgba(245, 197, 24, 0.22) 10px 12px,
+        transparent 12px 22px
+      );
+      mask-image: linear-gradient(to top, #000 20%, transparent 85%);
+      opacity: 0.55;
+    }
+
+    .halftone {
+      background-image: radial-gradient(rgba(11, 42, 107, 0.18) 1.2px, transparent 1.4px);
+      background-size: 10px 10px;
+    }
+
+    .paw-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cellipse cx='42' cy='50' rx='10' ry='8'/%3E%3Cellipse cx='28' cy='34' rx='6' ry='8'/%3E%3Cellipse cx='42' cy='28' rx='6' ry='8'/%3E%3Cellipse cx='56' cy='34' rx='6' ry='8'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .comic-stroke {
+      -webkit-text-stroke: 6px #0B2A6B;
+      paint-order: stroke fill;
+      text-shadow: 4px 5px 0 #E31B23;
+    }
+
+    .gold-stroke {
+      -webkit-text-stroke: 5px #0B2A6B;
+      paint-order: stroke fill;
+      text-shadow: 3px 4px 0 #E31B23;
+    }
+
+    .float-bob {
+      animation: bob 3.6s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .cape-sway {
+      animation: sway 4.2s ease-in-out infinite;
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+
+    .burst {
+      background: conic-gradient(from 90deg, #F5C518, #E31B23, #1E6FE8, #F5C518);
+    }
+
+    .ticker {
+      animation: ticker 22s linear infinite;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,246,232,.96), rgba(255,236,205,.92));
+      border: 4px solid #0B2A6B;
+      box-shadow: 8px 8px 0 #0B2A6B;
+    }
+
+    .step-num {
+      background: linear-gradient(180deg, #F5C518, #E89A3C);
+      border: 4px solid #0B2A6B;
+      color: #0B2A6B;
+    }
+
+    iframe.dex {
+      min-height: 620px;
+      width: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 768px) {
+      iframe.dex { min-height: 460px; }
+      .comic-stroke { -webkit-text-stroke: 4px #0B2A6B; }
+    }
+  </style>
+</head>
+<body class="sky-bg relative min-h-screen overflow-x-hidden">
+  <div class="clouds fixed inset-0 z-0"></div>
+  <div class="city"></div>
+
+  <div class="relative z-10">
+    <div class="overflow-hidden border-b-4 border-[#0B2A6B] bg-[#0B2A6B] py-2">
+      <div class="ticker flex w-[200%] gap-10 whitespace-nowrap font-display text-xl tracking-wider text-scat-gold">
+        <span>⚡ SUPER CAT • $SCAT • FEARLESS FELINE POWER • SPEED • COURAGE • COMMUNITY • UNSTOPPABLE FUN • SOLANA HERO •</span>
+        <span>⚡ SUPER CAT • $SCAT • FEARLESS FELINE POWER • SPEED • COURAGE • COMMUNITY • UNSTOPPABLE FUN • SOLANA HERO •</span>
+      </div>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b-4 border-[#0B2A6B] bg-[#1E6FE8]/90 backdrop-blur-md">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
+        <a href="#top" class="flex items-center gap-3">
+          <img src="logo.jpg" alt="Super Cat logo" class="h-14 w-14 rounded-full border-4 border-scat-gold object-cover shadow-comic" />
+          <div>
+            <p class="font-comic text-2xl leading-none text-scat-gold drop-shadow">SUPER CAT</p>
+            <p class="font-display tracking-widest text-white">$SCAT</p>
+          </div>
+        </a>
+        <div class="hidden items-center gap-6 font-display text-lg tracking-wide md:flex">
+          <a href="#about" class="hover:text-scat-gold">About</a>
+          <a href="#howto" class="hover:text-scat-gold">How to Buy</a>
+          <a href="#chart" class="hover:text-scat-gold">Chart</a>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="https://t.me/supercat_portal" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-full border-2 border-white shadow-md transition hover:scale-110">
+            <img src="tg.png" alt="Telegram" class="h-10 w-10 object-cover" />
+          </a>
+          <a href="https://x.com/supercat_x" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-full border-2 border-white shadow-md transition hover:scale-110">
+            <img src="x.png" alt="X / Twitter" class="h-10 w-10 object-cover" />
+          </a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="hidden rounded-full border-4 border-[#0B2A6B] bg-white px-4 py-2 font-display text-lg text-scat-navy shadow-comic-gold sm:inline-flex">Chart</a>
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-[#0B2A6B] bg-scat-red px-4 py-2 font-display text-lg text-white shadow-comic">Buy Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="relative mx-auto max-w-7xl px-4 pb-10 pt-8">
+        <div class="relative overflow-hidden rounded-[2rem] border-8 border-[#0B2A6B] shadow-comic">
+          <img src="banner.png" alt="Super Cat banner — Super Cat SCAT over the city skyline" class="h-auto w-full object-cover" />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0B2A6B]/50 via-transparent to-transparent"></div>
+        </div>
+
+        <div class="mt-8 grid items-center gap-8 lg:grid-cols-[280px_1fr]">
+          <div class="mx-auto float-bob cape-sway">
+            <div class="relative">
+              <div class="burst absolute -inset-4 rounded-full opacity-70 blur-sm"></div>
+              <img src="logo.jpg" alt="Super Cat" class="relative h-64 w-64 rounded-full border-8 border-scat-gold object-cover shadow-comic-red" />
+            </div>
+          </div>
+
+          <div class="panel halftone paw-pattern rounded-[2rem] p-6 md:p-10">
+            <p class="font-display text-2xl tracking-widest text-scat-red">MEET THE HERO</p>
+            <h1 class="mt-1 font-comic text-5xl leading-none text-scat-gold comic-stroke sm:text-7xl">SUPER CAT</h1>
+            <p class="mt-1 font-display text-4xl text-scat-red gold-stroke">$SCAT</p>
+            <p class="mt-5 max-w-3xl text-lg font-extrabold leading-relaxed text-scat-navy md:text-xl">
+              Super Cat brings fearless feline power to Solana, uniting meme lovers through speed, courage, community, and unstoppable fun.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-[#0B2A6B] bg-scat-red px-6 py-3 font-display text-2xl text-white shadow-comic hover:translate-y-0.5">Buy Now</a>
+              <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-[#0B2A6B] bg-scat-gold px-6 py-3 font-display text-2xl text-scat-navy shadow-comic hover:translate-y-0.5">Chart</a>
+              <a href="https://t.me/supercat_portal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border-4 border-[#0B2A6B] bg-white px-5 py-2 font-display text-xl text-scat-navy shadow-comic">
+                <img src="tg.png" alt="" class="h-8 w-8 rounded-full object-cover" /> Telegram
+              </a>
+              <a href="https://x.com/supercat_x" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border-4 border-[#0B2A6B] bg-white px-5 py-2 font-display text-xl text-scat-navy shadow-comic">
+                <img src="x.png" alt="" class="h-8 w-8 rounded-full object-cover" /> Twitter
+              </a>
+            </div>
+
+            <div class="mt-6 rounded-2xl border-4 border-[#0B2A6B] bg-white/80 p-4">
+              <p class="font-display text-lg tracking-wider text-scat-navy">Contract Address</p>
+              <div class="mt-2 flex flex-col gap-3 sm:flex-row">
+                <code id="ca-text" class="flex-1 truncate rounded-xl bg-scat-navy px-4 py-3 font-mono text-sm font-bold text-scat-gold sm:text-base">TBA</code>
+                <button id="copy-ca" type="button" class="rounded-xl border-4 border-[#0B2A6B] bg-scat-gold px-5 py-2 font-display text-xl text-scat-navy shadow-comic hover:bg-yellow-300">
+                  Copy CA
+                </button>
+              </div>
+              <p id="copy-status" class="mt-2 hidden font-extrabold text-scat-red">Copied to clipboard. Super save!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="mx-auto max-w-7xl px-4 py-6">
+        <div class="grid gap-5 md:grid-cols-4">
+          <article class="panel rounded-3xl p-5 text-center">
+            <p class="text-4xl">⚡</p>
+            <h3 class="font-display text-2xl text-scat-red">Speed</h3>
+            <p class="mt-2 font-extrabold text-scat-navy">Solana-fast leaps. Super Cat does not wait for the next block of boredom.</p>
+          </article>
+          <article class="panel rounded-3xl p-5 text-center">
+            <p class="text-4xl">🦁</p>
+            <h3 class="font-display text-2xl text-scat-red">Courage</h3>
+            <p class="mt-2 font-extrabold text-scat-navy">Cape on, claws out. Fearless feline energy for every chart dip and moonshot.</p>
+          </article>
+          <article class="panel rounded-3xl p-5 text-center">
+            <p class="text-4xl">🐾</p>
+            <h3 class="font-display text-2xl text-scat-red">Community</h3>
+            <p class="mt-2 font-extrabold text-scat-navy">Meme lovers assemble. One pack, one paw print, one unstoppable city of cats.</p>
+          </article>
+          <article class="panel rounded-3xl p-5 text-center">
+            <p class="text-4xl">🎉</p>
+            <h3 class="font-display text-2xl text-scat-red">Fun</h3>
+            <p class="mt-2 font-extrabold text-scat-navy">Unstoppable fun is the mission. If it is not hilarious, Super Cat is not done.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="howto" class="mx-auto max-w-7xl px-4 py-10">
+        <div class="mb-8 text-center">
+          <p class="font-display text-2xl tracking-widest text-white">4 STEPS. ZERO EXCUSES.</p>
+          <h2 class="font-comic text-5xl text-scat-gold comic-stroke sm:text-6xl">HOW TO BUY $SCAT</h2>
+          <p class="mx-auto mt-3 max-w-2xl text-lg font-extrabold text-white">
+            Super Cat lives on Solana. Grab a wallet, load SOL, and swap into $SCAT like a hero landing on a rooftop.
+          </p>
+        </div>
+
+        <ol class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <li class="panel relative rounded-3xl p-6">
+            <span class="step-num absolute -top-4 left-5 flex h-12 w-12 items-center justify-center rounded-full font-comic text-2xl">1</span>
+            <h3 class="mt-4 font-display text-2xl text-scat-red">Get a Solana Wallet</h3>
+            <p class="mt-3 font-extrabold text-scat-navy">Install Phantom or Solflare. Create a wallet and guard that seed phrase like Super Cat guards the city.</p>
+          </li>
+          <li class="panel relative rounded-3xl p-6">
+            <span class="step-num absolute -top-4 left-5 flex h-12 w-12 items-center justify-center rounded-full font-comic text-2xl">2</span>
+            <h3 class="mt-4 font-display text-2xl text-scat-red">Fund with SOL</h3>
+            <p class="mt-3 font-extrabold text-scat-navy">Buy SOL on an exchange, then send it to your Solana wallet. Heroes need fuel before takeoff.</p>
+          </li>
+          <li class="panel relative rounded-3xl p-6">
+            <span class="step-num absolute -top-4 left-5 flex h-12 w-12 items-center justify-center rounded-full font-comic text-2xl">3</span>
+            <h3 class="mt-4 font-display text-2xl text-scat-red">Open the Swap</h3>
+            <p class="mt-3 font-extrabold text-scat-navy">Hit Buy Now to open PumpSwap with SOL as input. Confirm you are swapping into $SCAT.</p>
+          </li>
+          <li class="panel relative rounded-3xl p-6">
+            <span class="step-num absolute -top-4 left-5 flex h-12 w-12 items-center justify-center rounded-full font-comic text-2xl">4</span>
+            <h3 class="mt-4 font-display text-2xl text-scat-red">Swap &amp; Join</h3>
+            <p class="mt-3 font-extrabold text-scat-navy">Swap SOL for $SCAT, copy the CA, then join Telegram and X. Cape on. Mission started.</p>
+          </li>
+        </ol>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-[#0B2A6B] bg-scat-red px-8 py-3 font-display text-2xl text-white shadow-comic">Buy $SCAT Now</a>
+          <button type="button" onclick="document.getElementById('copy-ca').click()" class="rounded-full border-4 border-[#0B2A6B] bg-scat-gold px-8 py-3 font-display text-2xl text-scat-navy shadow-comic">Copy CA</button>
+        </div>
+      </section>
+
+      <section id="chart" class="mx-auto max-w-7xl px-4 pb-28 pt-4">
+        <div class="mb-6 text-center">
+          <h2 class="font-comic text-5xl text-scat-gold comic-stroke">LIVE CHART</h2>
+          <p class="mt-2 font-extrabold text-white">Dexscreener radar for Super Cat. Watch the skyline move.</p>
+        </div>
+        <div class="overflow-hidden rounded-[2rem] border-8 border-[#0B2A6B] bg-[#0B2A6B] shadow-comic">
+          <iframe
+            class="dex"
+            title="Dexscreener Super Cat chart"
+            src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          ></iframe>
+        </div>
+        <p class="mt-4 text-center font-extrabold text-white/90">
+          Full chart:
+          <a class="underline decoration-scat-gold decoration-4 underline-offset-4" href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer">dexscreener.com/solana/TBA</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="relative border-t-4 border-[#0B2A6B] bg-[#0B2A6B]/85 px-4 py-10 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-col items-center gap-4 text-center">
+        <img src="logo.jpg" alt="" class="h-16 w-16 rounded-full border-4 border-scat-gold object-cover" />
+        <p class="font-comic text-3xl text-scat-gold">SUPER CAT • $SCAT</p>
+        <p class="max-w-xl font-extrabold text-white/90">Fearless feline power on Solana. Speed. Courage. Community. Unstoppable fun.</p>
+        <div class="flex gap-3">
+          <a href="https://t.me/supercat_portal" target="_blank" rel="noopener noreferrer"><img src="tg.png" alt="Telegram" class="h-12 w-12 rounded-full border-2 border-white" /></a>
+          <a href="https://x.com/supercat_x" target="_blank" rel="noopener noreferrer"><img src="x.png" alt="Twitter" class="h-12 w-12 rounded-full border-2 border-white" /></a>
+        </div>
+        <p class="text-sm font-bold text-white/70">$SCAT is a meme token. DYOR. Not financial advice.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const CA = "TBA";
+    const copyBtn = document.getElementById("copy-ca");
+    const status = document.getElementById("copy-status");
+
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(CA);
+      } catch {
+        const area = document.createElement("textarea");
+        area.value = CA;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        area.remove();
+      }
+      status.classList.remove("hidden");
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => {
+        status.classList.add("hidden");
+        copyBtn.textContent = "Copy CA";
+      }, 1800);
+    });
+  </script>
+</body>
+</html>
